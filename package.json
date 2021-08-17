@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node server.js",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "preinstall": "npm install -g angular-cli",
@@ -20,6 +20,7 @@
     "@angular/platform-browser": "~12.1.0-",
     "@angular/platform-browser-dynamic": "~12.1.0-",
     "@angular/router": "~12.1.0-",
+    "express": "^4.17.1",
     "ng2-order-pipe": "^0.1.5",
     "ng2-search-filter": "^0.5.1",
     "ngx-pagination": "^5.1.1",
