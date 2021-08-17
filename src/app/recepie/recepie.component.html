@@ -1,0 +1,15 @@
+<div class="background"  [ngStyle]="style">
+    <article class="container" >
+            <h1 class="main__title">{{recepie.name}}</h1>
+            
+
+            <h2 class="secondary__title">Ingredientes</h2>
+
+   <ul>
+       <li class="ingredients" *ngFor="let ingredient of recepie.ingredients"><p>{{ingredient.ingredient}}</p></li>
+   </ul>
+            <h2 class="secondary__title">Preparación</h2>
+           <p class="recepie"> {{recepie.recepie}} </p>
+    </article>
+
+</div>

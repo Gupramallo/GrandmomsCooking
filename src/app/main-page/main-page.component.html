@@ -1,0 +1,61 @@
+<div class="hero">
+  <div class="hero__main container">
+    <div class="hero__texts">
+      <h1 class="hero__title">¡CheeseCake de Fresa!</h1>
+      <p class="hero__text">
+        Si la Torta de Queso es de tus postres favoritos, ¡esta receta es para
+        ti!.
+      </p>
+      <p class="hero__text">
+        Te enseñamos a prepararla, tal y como cualquier abuela la haría en
+        casa...
+      </p>
+    </div>
+    <a [routerLink]="['/recepie', '6111a2d695dd7b145ddf335c']" class="hero__cta"
+      >Ver Más</a
+    >
+  </div>
+</div>
+
+<main class="main">
+  <h2 class="title">Nuestras Recetas</h2>
+
+  <div class="recepies container">
+    <div class="search__container">
+      <table class="elements__container">
+        <tr>
+          <td>
+            <input
+              type="text"
+              name="name"
+              class="input__search"
+              [(ngModel)]="name"
+              (ngModelChange)="Search()"
+              placeholder="Busca nuestras recetas"
+            />
+          </td>
+          <td>
+            <i class="bx bx-search"></i>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="recepies__cards">
+      <article class="recepies__card" *ngFor="let recepie of recepies">
+        <div class="card__img">
+          <img class="recepies__img" src="{{ recepie.img }}" alt="" />
+        </div>
+        <div class="recepies__texts">
+          <h3 class="recepies__title">{{ recepie.name }}</h3>
+          <p class="recepies__paragraph">
+            {{ recepie.card_text }}
+          </p>
+          <a [routerLink]="['/recepie', recepie._id]" class="recepies__cta"
+            >Ver Más</a
+          >
+        </div>
+      </article>
+    </div>
+  </div>
+</main>

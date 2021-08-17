@@ -1,0 +1,16 @@
+<header class="header" #header>
+    <nav class="nav bd-container">
+        <a [routerLink]="['']" class="logo">GrandMom's</a>
+
+        <div class="nav__menu" #nav_menu [ngClass]="{show: show}"> 
+            <ul class="nav__list">
+                <li class="nav__item" (click)="show=toggle()"><a [routerLink]="['/about']" class="nav__link">Quienes Somos</a></li>
+            </ul>
+            
+        </div>
+        <div class="nav__toggle" (click)="show=toggle()">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+
+</header>

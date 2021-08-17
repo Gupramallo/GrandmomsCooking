@@ -1,1 +1,202 @@
-/* You can add global styles to this file, and also import other style files */
+/****************Fonts**************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cookie&family=Karla&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+/*** Variables*/
+
+:root{
+    --header-heigth: 4rem;
+
+    --primary-color: #317ec7;
+    --primary-color-alt: #13487a;
+    --title-color: #faf5f5f8;
+    --text-color: #131212b6;
+    --body-color: #faf5f5f8;
+
+    /*Tipografia*/
+
+    --font-title: 'Cookie', cursive;
+    --font-title-article: 'Abril Fatface', cursive;
+    --font-text: 'Karla', sans-serif;
+
+    --h1: 1.5rem;
+    
+
+}
+
+
+@media screen and (min-width:768px) {
+    
+    :root{
+    --Big-font-size: 4rem;
+    --h1: 2.5rem;
+    --text-font-size: 1rem;
+    
+    }
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    font-family: var(--font-text);
+    font-size: var(--text-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    line-height: 1;
+
+}
+
+h1,h2,h3,p,ul{
+    margin: 0;
+}
+
+h1{
+    font-family: var(--font-title-article);
+    font-size: 2rem;
+    
+}
+
+ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.bd-container{
+    max-width: 960px;
+    width: calc(100% - 2rem);
+    margin:0 2rem;
+}
+
+.bd-grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--primary-color-alt);
+}
+
+
+.nav{
+    max-width: 1024px;
+    height: var(--header-heigth);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width:768px) {
+    
+    
+    .nav__menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color: var(--body-color);
+        transition: .6s;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+        border-radius: 1rem;
+        z-index: 100;
+    }
+}
+
+.nav__item{
+    margin-bottom: 2rem;
+}
+
+.nav__link, .logo, .nav__toggle{
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.logo{
+    color: #fff;
+    font-family: var(--font-title);
+    font-size: var(--h1);   
+}
+
+.logo:hover{
+    color: var(--primary-color);
+}
+
+.nav__link{
+    transition: .3s;
+
+}
+
+.nav__link:hover{
+    color: var(--primary-color);
+}
+
+.nav__toggle{
+    margin-right: 2rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.show{
+    top: var(--header-heigth);
+}
+
+@media screen and (min-width: 769px){
+
+    .bd-container{
+        margin: auto;
+        padding: 1rem;
+      }
+      
+    .nav{
+      height: calc(var(--header-height) + 1.5rem);
+    }
+    .nav__list{
+      display: flex;
+    }
+    .nav__item{
+      margin-left: 2.5rem;
+      margin-bottom: 0;
+    }
+    .nav__toggle{
+      display: none;
+    }
+
+    .nav__link, .nav__toggle{
+        color: var(--body-color);
+        font-weight: bold;
+    }
+  }
+  
+ 
+  ul{
+    margin-right: 40px;
+}
