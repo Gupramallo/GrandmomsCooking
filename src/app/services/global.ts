@@ -1,3 +1,3 @@
 export var Global ={
-    url: 'http://api.grandmoms.gupramallo.com/api/'
+    url: 'https://cooking-backend-angular.herokuapp.com/'
 }
